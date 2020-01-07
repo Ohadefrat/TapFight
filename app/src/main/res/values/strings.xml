@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Tap Fight</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="facebook_app_id">2835868559765172</string>
+    <string name="fb_login_protocol_scheme">fb2835868559765172</string>
+
+    <string name="new_game">New Game</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="facebook">Facebook</string>
+    <string name="sign_in">Sign In:</string>
+    <string name="about">About</string>
+    <string name="whats_up">Whats up</string>
+
+
+    <integer name="weight">1</integer>
+
+
+    <dimen name="dialog_top_radius">21dp</dimen>
+    <dimen name="dialog_buttom_radius">21dp</dimen>
+
+    <dimen name="textview_dialog_head_min_height">50dp</dimen>
+    <dimen name="textview_dialog_drawable_padding">5dp</dimen>
+
+    <dimen name="button_dialog_layout_margin">3dp</dimen>
+
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="signed_out" />
+    <string name="loading" />
+    <string name="logout" />
+
+</resources>

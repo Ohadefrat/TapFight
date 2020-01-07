@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="button_facebook_login" type="id" />
+    <item name="button_facebook_signout" type="id" />
+    <item name="logo" type="id" />
+    <item name="profile" type="id" />
+</resources>
