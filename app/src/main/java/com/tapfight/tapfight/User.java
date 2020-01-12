@@ -1,4 +1,4 @@
-package com.example.tapfight;
+package com.tapfight.tapfight;
 
 public class User {
 

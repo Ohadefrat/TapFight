@@ -50,6 +50,43 @@
           ]
         }
       }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:119042305904:android:c2822e1ca22264466429b5",
+        "android_client_info": {
+          "package_name": "com.tapfight.tapfight"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "119042305904-6lg6d30fcejsh8mfnhj6mar39vjk8gle.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tapfight.tapfight",
+            "certificate_hash": "653f8ae0a3c7532b1ca946759bca8492bb992398"
+          }
+        },
+        {
+          "client_id": "119042305904-7ascd2cmlnmllplmi7irahdres7aq42v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSKp3yg5fM63rvO-cDs0sxI1lmuMkCtkw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "119042305904-7ascd2cmlnmllplmi7irahdres7aq42v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
     }
   ],
   "configuration_version": "1"

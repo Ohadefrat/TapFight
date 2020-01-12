@@ -91,16 +91,6 @@
         app:layout_constraintVertical_bias="0.63" />
 
 
-    <pl.droidsonroids.gif.GifImageView
-        android:id="@+id/imageView3"
-        android:layout_width="419dp"
-        android:layout_height="437dp"
-        android:src="@drawable/fireworks"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.41"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

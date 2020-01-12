@@ -1,11 +1,10 @@
 
-package com.example.tapfight;
+package com.tapfight.tapfight;
 
 
 import android.app.ProgressDialog;
-import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.myapplication.R;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class textFaceBook extends AppCompatActivity {
     private ProgressDialog mProgressDialog;

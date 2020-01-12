@@ -1,4 +1,4 @@
-package com.example.tapfight;
+package com.tapfight.tapfight;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -11,7 +11,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.myapplication.R;
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
@@ -55,13 +54,13 @@ public class LoginActivity extends AppCompatActivity {
 
         AccessToken accessToken = AccessToken.getCurrentAccessToken();
         boolean isLoggedIn = accessToken != null && !accessToken.isExpired();
-        if(isLoggedIn == true){
+        if(isLoggedIn){
             openActivity1();
         }
 
         facebookLoginButton =(LoginButton) findViewById(R.id.login_button);
         callbackManager = CallbackManager.Factory.create();
-        facebookLoginButton.setReadPermissions("email", "public_profile","user_gender","user_age_range");
+        facebookLoginButton.setReadPermissions("email", "public_profile");
         facebookLoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -109,7 +108,6 @@ public class LoginActivity extends AppCompatActivity {
 
                             status.setText("Signed In");
 
-
                         } else {
                             // If sign in fails, display a message to the user.
 
@@ -132,18 +130,11 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void updateUI(FirebaseUser user){
-
-
         String userName= user.getDisplayName();
         String emailID= user.getEmail();
         String PhotoUrl = user.getPhotoUrl().toString();
-
-
-
-
         Toast.makeText(this, "UserName"+userName+"Email ID:"+emailID, Toast.LENGTH_LONG).show();
         if(user != null){
-
             User newUser = new User(userName,emailID,PhotoUrl);
             myRef.child(user.getUid()).setValue(newUser);
         }

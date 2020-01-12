@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.myapplication">
+    package="com.tapfight.tapfight">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name="com.example.tapfight.textFaceBook" />
+        <activity android:name="com.tapfight.tapfight.textFaceBook" />
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
@@ -45,7 +45,7 @@
             android:resource="@array/preloaded_fonts" />
 
         <activity
-            android:name="com.example.tapfight.LoginActivity"
+            android:name="com.tapfight.tapfight.LoginActivity"
             android:configChanges="orientation"
             android:label="@string/app_name"
             android:screenOrientation="portrait">
@@ -56,22 +56,22 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.tapfight.Activity4"
+            android:name="com.tapfight.tapfight.Activity4"
             android:configChanges="orientation"
-            android:parentActivityName="com.example.tapfight.MainActivity"
+            android:parentActivityName="com.tapfight.tapfight.MainActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.example.tapfight.Activity3"
+            android:name="com.tapfight.tapfight.Activity3"
             android:configChanges="orientation"
-            android:parentActivityName="com.example.tapfight.MainActivity"
+            android:parentActivityName="com.tapfight.tapfight.MainActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.example.tapfight.Activity2"
+            android:name="com.tapfight.tapfight.Activity2"
             android:configChanges="orientation"
-            android:parentActivityName="com.example.tapfight.MainActivity"
+            android:parentActivityName="com.tapfight.tapfight.MainActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.example.tapfight.MainActivity"
+            android:name="com.tapfight.tapfight.MainActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait" />
     </application>

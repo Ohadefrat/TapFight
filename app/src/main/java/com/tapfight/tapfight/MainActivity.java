@@ -1,4 +1,4 @@
-package com.example.tapfight;
+package com.tapfight.tapfight;
 
 
 import android.annotation.SuppressLint;
@@ -9,6 +9,7 @@ import android.graphics.BitmapShader;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Shader;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -18,7 +19,6 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.myapplication.R;
 import com.facebook.FacebookSdk;
 import com.facebook.login.LoginManager;
 import com.google.android.gms.ads.AdListener;
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private Button signOut_btn;
     private Button setting;
-    private InterstitialAd mInterstitialAd;
+    InterstitialAd mInterstitialAd;
     Dialog myDialog;
 
 
@@ -46,11 +46,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        MobileAds.initialize(this, "ca-app-pub-4032972140338574~9092550878");
+        MobileAds.initialize(this, "ca-app-pub-4032972140338574/9938728681");
         AdView mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
         myDialog = new Dialog(this);
+
 
 
 
@@ -98,15 +99,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 ShowPopup();
-
-
-
             }
         });
-
     }
 
     public void openLoginActivity() {
+
         Intent login = new Intent(MainActivity.this, LoginActivity.class);
         startActivity(login);
     }
@@ -124,29 +122,30 @@ public class MainActivity extends AppCompatActivity {
 
 
  // הגדרת אופציית חזרה ומעבר לפרסומת
-    public void onBackPressed() {
+ public void onBackPressed() {
 
-        if (mInterstitialAd.isLoaded()) {
-            mInterstitialAd.show();
+     if (mInterstitialAd.isLoaded()) {
+         mInterstitialAd.show();
 
-            mInterstitialAd.setAdListener(new AdListener(){
-                @Override
-                public void onAdClosed() {
-                    super.onAdClosed();
-                    finish();
-                }
-            });
-            }
+         mInterstitialAd.setAdListener(new AdListener(){
+             @Override
+             public void onAdClosed() {
+                 super.onAdClosed();
+                 finish();
+             }
+         });
+     }
 
-         else {
-            super.onBackPressed();
-        }
-    }
+     else {
+         super.onBackPressed();
+     }
+ }
 
     @SuppressLint("SetTextI18n")
     public void ShowPopup() {
         TextView txtclose,hellotext;
         ImageView profilePic;
+
 
         final Button signOut_btn,rateUs;
         Objects.requireNonNull(myDialog.getWindow()).setBackgroundDrawableResource(
@@ -192,19 +191,28 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         rateUs.setOnClickListener(new View.OnClickListener() {
-
             TextView txtclose;
 
             @Override
             public void onClick(View v) {
                 myDialog.setContentView(R.layout.ratebutton);
-
+                Button sumbitbtn = myDialog.findViewById(R.id.submit_button);
                 txtclose =myDialog.findViewById(R.id.txtclose);
                 txtclose.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         ShowPopup();
-
+                    }
+                });
+                sumbitbtn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        final String appPackageName = getPackageName(); // getPackageName() from Context or Activity object
+                        try {
+                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
+                        } catch (android.content.ActivityNotFoundException anfe) {
+                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
+                        }
                     }
                 });
                 

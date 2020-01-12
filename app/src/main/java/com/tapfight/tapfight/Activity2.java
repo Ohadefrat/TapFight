@@ -1,4 +1,4 @@
-package com.example.tapfight;
+package com.tapfight.tapfight;
 
 import android.animation.ArgbEvaluator;
 import android.animation.ValueAnimator;
@@ -15,8 +15,6 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
-
-import com.example.myapplication.R;
 
 import java.util.Locale;
 
@@ -193,6 +191,7 @@ public class Activity2 extends AppCompatActivity {
                         Intent red = new Intent(Activity2.this, Activity4.class);
                         red.putExtra(EXTRA_NUMBER, number);
                         startActivity(red);
+
                     }
 
         }

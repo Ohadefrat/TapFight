@@ -1,4 +1,4 @@
-package com.example.tapfight;
+package com.tapfight.tapfight;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
